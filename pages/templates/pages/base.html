@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'pages/style.css' %}">
+    <title>Document</title>
+</head>
+<body style="">
+    <div> <h1>Pages App</h1></div>
+    <nav>
+        <ul id="nav">
+            <li class="nav-link">
+                <a href="{% url 'index' %}" data-name="home">Home</a>
+            </li>
+            <li class="nav-link">
+                <a href="{% url 'about' %}" data-name="About">About</a>
+            </li>
+            <li class="nav-link">
+                <a href="{% url 'services' %}" data-name="services">services</a>
+            </li>
+            <li class="nav-link">
+                <a href="{% url 'contact' %}" data-name="contact">contact</a>
+            </li>
+        </ul>
+    </nav>
+    {% block content %}
+
+    {% endblock content %}
+
+</body>
+</html>
